@@ -5,8 +5,17 @@ import "./NavBar.css"
 export const NavBar = () => {
   const history = useHistory()
   return (
-    <nav>
+    <ul className="navbar">
       <Link to="/">Home</Link>
+      <li className="navbar__item">
+        <Link to="/tutors">Tutors</Link>
+      </li>
+      <li className="navbar__item">
+        <Link to="/parents">Parents</Link>
+      </li>
+      <li className="navbar__item">
+        <Link to="/reviews">Reviews</Link>
+      </li>
       {
         localStorage.getItem("auth_token") !== null ?
           <button onClick={() => {
@@ -21,6 +30,6 @@ export const NavBar = () => {
             <Link to="/register">Register</Link>
           </>
       }
-    </nav>
+    </ul>
   )
 }
