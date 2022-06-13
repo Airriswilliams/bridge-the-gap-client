@@ -7,6 +7,8 @@ import './Auth.css'
 export const Register = () => {
   const username = useRef()
   const password = useRef()
+  const child__name = useRef()
+  const child__age = useRef()
   const history = useHistory()
 
   const handleRegister = (e) => {
@@ -14,7 +16,9 @@ export const Register = () => {
 
     const newUser = {
       "username": username.current.value,
-      "password": password.current.value
+      "password": password.current.value,
+      "child_name": child__name.current.value,
+      "child_age": child__age.current.value
     }
 
     registerUser(newUser).then(res => {
@@ -36,6 +40,14 @@ return (
       <fieldset>
         <label htmlFor="inputPassword"> Password </label>
         <input ref={password} type="password" name="password" placeholder="Password" required />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="inputPassword"> Child's Name </label>
+        <input ref={child__name} type="child__name" name="child__name" placeholder="Enter your child's name" required />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="inputPassword"> Child's Age </label>
+        <input ref={child__age} type="child__age" name="child__age" placeholder="Enter your child's age" required />
       </fieldset>
       <fieldset>
         <button type="submit">Register</button>

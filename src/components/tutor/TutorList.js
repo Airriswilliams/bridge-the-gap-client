@@ -22,9 +22,12 @@ export const TutorList = (props) => {
                 tutors.map(tutor => {
                     return <section key={`tutor--${tutor.id}`} className="tutor">
                         <div className="tutor__name">Meet {tutor.name}</div>
-                        <div className="tutor__bio">About {tutor.bio}</div>
+                        <div className="tutor__bio">About: {tutor.bio}</div>
                         <div className="tutor__schedule">Available on {tutor.schedule}</div>
-                        <div className="tutor__image">{tutor.image_url}</div>
+                        <div className="tutor__image">
+                            <img
+                            src={`http://localhost:8000${tutor.image_url}`}/>
+                            </div>
 
                  <header>
                  <Link to={`/tutors/${tutor.id}`}>
@@ -42,3 +45,5 @@ export const TutorList = (props) => {
     )
 
 }
+
+// http://localhost:800/media${tutor.image_url}

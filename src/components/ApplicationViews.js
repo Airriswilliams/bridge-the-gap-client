@@ -6,7 +6,8 @@ import { ReviewList } from "./review/ReviewList.js"
 import { TutorReview } from "./tutor/TutorReview.js"
 
 export const ApplicationViews = () => {
-    return <>
+    return (
+    <>
         <main style={{
             margin: "5rem 2rem",
             lineHeight: "1.75rem"
@@ -28,4 +29,5 @@ export const ApplicationViews = () => {
         </Route>
         </main>
     </>
+    );
 }
