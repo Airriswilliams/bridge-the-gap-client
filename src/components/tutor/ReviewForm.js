@@ -53,7 +53,7 @@ export const TutorReview = () => {
 
           // Send POST request to your API
           createReview(newReview).then(() =>
-            history.push(`/reviews/${tutorId.tutorId}`)
+            history.push(`/reviews`)
           );
         }}
         className="btn btn-primary"

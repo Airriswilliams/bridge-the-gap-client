@@ -1,5 +1,5 @@
 import React, {useEffect} from "react"
-import { useHistory } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
 import { getReviews, deleteReview } from "./ReviewManager.js"
 
@@ -30,6 +30,10 @@ export const ReviewList = (props) => {
 
                     <header>
                     <button onClick={() => deleteHandler(review.id)}>DELETE</button>
+                    </header>
+
+                    <header>
+                    <Link to={`/reviews/${review.id}`}>Edit</Link>
                     </header>
 
                     </section>

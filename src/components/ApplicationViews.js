@@ -4,6 +4,7 @@ import { TutorList } from "./tutor/TutorList.js"
 import { ParentList } from "./parent/ParentList.js"
 import { ReviewList } from "./review/ReviewList.js"
 import { TutorReview } from "./tutor/ReviewForm.js"
+import { EditReview } from "./tutor/UpdateReview.js"
 
 export const ApplicationViews = () => {
     return (
@@ -26,6 +27,10 @@ export const ApplicationViews = () => {
 
             <Route exact path="/tutors/:tutorId(\d+)/review">
           <TutorReview />
+        </Route>
+
+        <Route exact path="/reviews/:reviewId(\d+)">
+          <EditReview />
         </Route>
         </main>
     </>
