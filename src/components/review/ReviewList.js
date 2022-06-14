@@ -1,7 +1,7 @@
 import React, {useEffect} from "react"
 import { useHistory } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
-import { getReviews } from "./ReviewManager.js"
+import { getReviews, deleteReview } from "./ReviewManager.js"
 
 
 export const ReviewList = (props) => {
@@ -10,6 +10,12 @@ export const ReviewList = (props) => {
     useEffect(() => {
         getReviews().then(data => setReviews(data))
     }, [])
+
+    const deleteHandler = (id) => {
+        deleteReview(id)
+        .then(getReviews)
+        .then((data) => setReviews(data))
+    }
 
     return (
         <article className="reviews">
@@ -21,6 +27,10 @@ export const ReviewList = (props) => {
                         <div className="review__tutor">Tutor Name: {review.tutor.name}</div>
                         <div className="review__review">Review: {review.tutor_review}</div>
                         {/* <div className="review_parent">Review: {review.parent.user.first_name}</div> */}
+
+                    <header>
+                    <button onClick={() => deleteHandler(review.id)}>DELETE</button>
+                    </header>
 
                     </section>
                        

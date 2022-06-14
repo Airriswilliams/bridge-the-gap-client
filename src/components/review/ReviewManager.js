@@ -26,4 +26,13 @@ export const createReview = (review) => {
     }).then((response) => response.json());
   };
 
+  export const deleteReview = (reviewId) => {
+    return fetch(`http://localhost:8000/reviews/${reviewId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Token ${localStorage.getItem("lu_token")}`,
+      },
+    });
+  };
+  
   
