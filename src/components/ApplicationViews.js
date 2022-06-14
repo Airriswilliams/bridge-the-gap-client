@@ -3,7 +3,7 @@ import { Route } from "react-router-dom"
 import { TutorList } from "./tutor/TutorList.js"
 import { ParentList } from "./parent/ParentList.js"
 import { ReviewList } from "./review/ReviewList.js"
-import { TutorReview } from "./tutor/TutorReview.js"
+import { TutorReview } from "./tutor/ReviewForm.js"
 
 export const ApplicationViews = () => {
     return (

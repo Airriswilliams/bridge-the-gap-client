@@ -25,3 +25,12 @@ export const getSingleTutor = (id) => {
       body: JSON.stringify(tutor),
     });
   };
+
+  export const getLanguages = () => {
+    return fetch("http://localhost:8000/languages", {
+        headers:{
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`
+        }
+    })
+        .then(response => response.json())
+}

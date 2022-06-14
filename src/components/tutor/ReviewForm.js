@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { reviewTutor, getSingleTutor } from "./TutorManager.js";
-
+import { getSingleTutor } from "./TutorManager.js";
+import { createReview } from "../review/ReviewManager.js";
 
 export const TutorReview = () => {
  const history = useHistory();
@@ -25,12 +25,12 @@ export const TutorReview = () => {
 
   return (
     <form className="reviewForm">
-      <h2 className="reviewForm__tutor_review">Tutor Review</h2>
+      <h2 className="reviewForm__tutor_review">How Was Your Experience?</h2>
       <fieldset>
         <div className="form-group">
           <label htmlFor="review">Review: </label>
           <textarea
-            name="review"
+            name="tutor_review"
             required
             autoFocus
             className="form-control"
@@ -47,12 +47,12 @@ export const TutorReview = () => {
           evt.preventDefault();
 
           const newReview = {
-            review: review.tutor_review,
-            game: parseInt(tutorId.tutorId),
+            tutor_review: review.tutor_review,
+            tutor_id: parseInt(tutorId.tutorId),
           };
 
           // Send POST request to your API
-          reviewTutor(newReview).then(() =>
+          createReview(newReview).then(() =>
             history.push(`/reviews/${tutorId.tutorId}`)
           );
         }}

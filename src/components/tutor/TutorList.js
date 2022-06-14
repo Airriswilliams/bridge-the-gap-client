@@ -3,10 +3,11 @@ import { useState } from "react/cjs/react.development"
 import { useHistory, Link } from "react-router-dom";
 import { MdRateReview} from "react-icons/md"
 
-import { getTutors } from "./TutorManager.js"
+import { getTutors, getLanguages } from "./TutorManager.js"
 
 export const TutorList = (props) => {
     const [ tutors, setTutors] = useState([])
+    const [languages, setLanguages] = useState([])
     const history = useHistory();
 
 
@@ -14,14 +15,19 @@ export const TutorList = (props) => {
         getTutors().then(data => setTutors(data))
     }, [])
 
+    useEffect(() => {
+        getLanguages().then(data => setLanguages(data))
+    }, [])
+
 
     return (
         <article className="tutors">
             <h2>Meet our awesome Tutors!</h2>
+            <h3>Our tutors have experience teaching children Java Script, React, Angular, Django, HTML & CSS</h3>
             {
                 tutors.map(tutor => {
                     return <section key={`tutor--${tutor.id}`} className="tutor">
-                        <div className="tutor__name">Meet {tutor.name}</div>
+                        <div className="tutor__name"> {tutor.name}</div>
                         <div className="tutor__bio">About: {tutor.bio}</div>
                         <div className="tutor__schedule">Available on {tutor.schedule}</div>
                         <div className="tutor__image">
@@ -30,7 +36,7 @@ export const TutorList = (props) => {
                             </div>
 
                  <header>
-                 <Link to={`/tutors/${tutor.id}`}>
+                 <Link to={`/tutors/${tutor.id}/review`}>
                     <MdRateReview /> Share Your Experience
                   </Link>
       </header>
