@@ -9,6 +9,9 @@ export const Register = () => {
   const password = useRef()
   const child__name = useRef()
   const child__age = useRef()
+  const first_name = useRef()
+  const last_name = useRef()
+  const email = useRef()
   const history = useHistory()
 
   const handleRegister = (e) => {
@@ -18,7 +21,10 @@ export const Register = () => {
       "username": username.current.value,
       "password": password.current.value,
       "child_name": child__name.current.value,
-      "child_age": child__age.current.value
+      "child_age": child__age.current.value,
+      "first_name": first_name.current.value,
+      "last_name": last_name.current.value,
+      "email": email.current.value
     }
 
     registerUser(newUser).then(res => {
@@ -36,6 +42,18 @@ return (
       <fieldset>
         <label htmlFor="inputUsername">Username</label>
         <input ref={username} type="text" name="username" placeholder="Username" required />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="inputUsername">First Name</label>
+        <input ref={first_name} type="text" name="firstname" placeholder="Firstname" required />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="inputUsername">Last Name</label>
+        <input ref={last_name} type="text" name="lastname" placeholder="Lastname" required />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="inputUsername">Email Address</label>
+        <input ref={email} type="text" name="email" placeholder="Email" required />
       </fieldset>
       <fieldset>
         <label htmlFor="inputPassword"> Password </label>
