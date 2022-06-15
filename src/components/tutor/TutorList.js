@@ -52,4 +52,3 @@ export const TutorList = (props) => {
 
 }
 
-// http://localhost:800/media${tutor.image_url}

@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { TutorList } from "./tutor/TutorList.js"
 import { ParentList } from "./parent/ParentList.js"
 import { ReviewList } from "./review/ReviewList.js"
+import { SessionList } from "./tutorsession/SessionList.js"
 import { TutorReview } from "./tutor/ReviewForm.js"
 import { EditReview } from "./tutor/UpdateReview.js"
 
@@ -19,6 +20,9 @@ export const ApplicationViews = () => {
 
             <Route exact path="/parents">
                 <ParentList />
+            </Route>
+            <Route exact path="/sessions">
+                <SessionList />
             </Route>
 
             <Route exact path="/reviews">

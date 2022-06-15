@@ -16,6 +16,9 @@ export const NavBar = () => {
       <li className="navbar__item">
         <Link to="/reviews">Reviews</Link>
       </li>
+      <li className="navbar__item">
+        <Link to="/sessions">Sessions</Link>
+      </li>
       {
         localStorage.getItem("auth_token") !== null ?
           <button onClick={() => {
