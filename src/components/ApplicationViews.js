@@ -6,6 +6,7 @@ import { ReviewList } from "./review/ReviewList.js"
 import { SessionList } from "./tutorsession/SessionList.js"
 import { TutorReview } from "./tutor/ReviewForm.js"
 import { EditReview } from "./tutor/UpdateReview.js"
+import { SessionForm } from "./tutorsession/SessionForm.js"
 
 export const ApplicationViews = () => {
     return (
@@ -24,6 +25,10 @@ export const ApplicationViews = () => {
             <Route exact path="/sessions">
                 <SessionList />
             </Route>
+
+            <Route exact path="/sessions/new">
+          <SessionForm />
+        </Route>
 
             <Route exact path="/reviews">
                 <ReviewList />

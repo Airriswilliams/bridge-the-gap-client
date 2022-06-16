@@ -3,11 +3,10 @@ import { useState } from "react/cjs/react.development"
 import { useHistory, Link } from "react-router-dom";
 import { MdRateReview} from "react-icons/md"
 
-import { getTutors, getLanguages } from "./TutorManager.js"
+import { getTutors} from "./TutorManager.js"
 
 export const TutorList = (props) => {
     const [ tutors, setTutors] = useState([])
-    const [languages, setLanguages] = useState([])
     const history = useHistory();
 
 
@@ -15,9 +14,7 @@ export const TutorList = (props) => {
         getTutors().then(data => setTutors(data))
     }, [])
 
-    useEffect(() => {
-        getLanguages().then(data => setLanguages(data))
-    }, [])
+  
 
 
     return (

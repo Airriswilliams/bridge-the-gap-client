@@ -26,11 +26,3 @@ export const getSingleTutor = (id) => {
     });
   };
 
-  export const getLanguages = () => {
-    return fetch("http://localhost:8000/languages", {
-        headers:{
-            "Authorization": `Token ${localStorage.getItem("lu_token")}`
-        }
-    })
-        .then(response => response.json())
-}
