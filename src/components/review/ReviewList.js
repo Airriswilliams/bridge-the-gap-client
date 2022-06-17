@@ -2,6 +2,8 @@ import React, {useEffect} from "react"
 import { useHistory, Link } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
 import { getReviews, deleteReview } from "./ReviewManager.js"
+import "./Review.css"
+
 
 
 export const ReviewList = (props) => {
@@ -33,7 +35,7 @@ export const ReviewList = (props) => {
                     </header>
 
                     <header>
-                    <Link to={`/reviews/${review.id}`}>Edit</Link>
+                    <Link className="navbar__link" to={`/reviews/${review.id}`}>Edit</Link>
                     </header>
 
                     </section>

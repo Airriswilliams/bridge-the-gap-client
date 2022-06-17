@@ -2,6 +2,7 @@ import React, {useEffect} from "react"
 import { useState } from "react/cjs/react.development"
 import { useHistory, Link } from "react-router-dom";
 import { getSessions, joinSession, leaveSession, getLanguages, deleteSession } from "./SessionManager.js";
+import "./Session.css"
 
 export const SessionList = (props) => {
     const [sessions, setSessions] = useState([])
@@ -53,7 +54,7 @@ export const SessionList = (props) => {
 
 
     return (
-        <article className="tutors">
+        <article className="sessions">
               <header>
         <button
           className="btn btn-2 btn-sep icon-create"
