@@ -4,22 +4,31 @@ import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import "./BridgeTheGap.css";
 
-export const App = () => (
+export const BridgeTheGap = () => {
+
+
+    return (
     <>
         <Route render={() => {
             if (localStorage.getItem("auth_token")) {
-                return <>
-                    <Route>
+                return (
+                 <>
+                  <div className="header">
+                  <div className="topSection">
+                    
                         <NavBar />
+                        </div>
                         <ApplicationViews />
-                    </Route>
+                    </div>
                 </>
+                ) 
             } else {
                 return <Redirect to="/login" />
+                    
             }
         }} />
-
         <Route path="/login">
             <Login />
         </Route>
@@ -27,6 +36,9 @@ export const App = () => (
         <Route path="/register">
             <Register />
         </Route>
-
+                    
     </>
 )
+    }
+
+

@@ -31,19 +31,20 @@ export const Login = () => {
   }
 
   return (
+    <div className="login-body">
     <main >
       <dialog ref={invalidDialog}>
         <div>Username or password was not valid.</div>
         <button onClick={e => invalidDialog.current.close()}>Close</button>
       </dialog>
       <section>
-        <form onSubmit={handleLogin}>
+        <form className="form--login" onSubmit={handleLogin}>
           <fieldset>
-            <label htmlFor="inputUsername"> Username</label>
+            <label className="username" htmlFor="inputUsername"> Username</label>
             <input ref={username} type="username" id="username" placeholder="Username address" required autoFocus />
           </fieldset>
           <fieldset>
-            <label htmlFor="inputPassword"> Password </label>
+            <label className="password" htmlFor="inputPassword"> Password </label>
             <input ref={password} type="password" id="password" placeholder="Password" required />
           </fieldset>
           <fieldset>
@@ -52,8 +53,9 @@ export const Login = () => {
         </form>
       </section>
       <section>
-        <Link to="/register">Not a member yet?</Link>
+        <Link className="member__link" to="/register">Not a member yet?</Link>
       </section>
     </main>
+    </div>
   )
 }

@@ -1,0 +1,25 @@
+/* .tutor {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "name" "bio" "schedule";
+
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    justify-content: center;
+} */
+
+
+
+.tutor_list_section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .tutor_image {
+    grid-area: image;
+}

@@ -2,8 +2,9 @@ import React, {useEffect} from "react"
 import { useState } from "react/cjs/react.development"
 import { useHistory, Link } from "react-router-dom";
 import { MdRateReview} from "react-icons/md"
-
 import { getTutors} from "./TutorManager.js"
+import "./Tutor.css"
+
 
 export const TutorList = (props) => {
     const [ tutors, setTutors] = useState([])
@@ -21,6 +22,7 @@ export const TutorList = (props) => {
         <article className="tutors">
             <h2>Meet our awesome Tutors!</h2>
             <h3>Our tutors have experience teaching children Java Script, React, Angular, Django, HTML & CSS</h3>
+            <div className="tutor_list_section">
             {
                 tutors.map(tutor => {
                     return <section key={`tutor--${tutor.id}`} className="tutor">
@@ -39,12 +41,14 @@ export const TutorList = (props) => {
       </header>
 
                     </section>
+                    
                 })
-            }
+            }</div>
 
 
 
         </article>
+    
     )
 
 }

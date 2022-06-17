@@ -1,0 +1,53 @@
+.html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Monument Extended', Arial, Helvetica, sans-serif;
+  }
+  
+  .body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .topSection {
+    background: url(/src/images/HomePage.jpg);
+    background-size: contain;
+    padding-top: 15vh;
+  }
+  
+  .container {
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    background: black;
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: grey;
+  }
+  
+  .header_photo {
+    height: 10rem;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .title {
+    color: aqua;
+    padding-left: 10em;
+  }
+  .subtitle {
+    color: rgb(255, 0, 0);
+    padding-left: 10em;
+  }
+  
