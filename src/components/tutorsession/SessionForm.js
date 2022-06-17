@@ -84,7 +84,7 @@ export const SessionForm = () => {
             </div>
           </fieldset>
     
-          {/* <fieldset>
+          <fieldset>
             <div className="form-group">
               <select
                 name="tutor_id"
@@ -104,15 +104,15 @@ export const SessionForm = () => {
                 })}
               </select>
             </div>
-          </fieldset> */}
+          </fieldset>
 
           <fieldset>
             <div className="form-group">
               <select
-                name="tutor_id"
+                name="language"
                 required
                 className="form-control"
-                value={newSession.tutor_id}
+                value={newSession.language}
                 placeholder="Select A Language..."
                 onChange={changeSessionState}
               >
@@ -139,7 +139,7 @@ export const SessionForm = () => {
                 date: newSession.date,
                 skill_level: newSession.skill_level,
                 time: newSession.time,
-                language: newSession.language.language
+                language: newSession.language
               };
     
               // Send POST request to your API
