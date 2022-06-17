@@ -13,7 +13,7 @@ export const ParentList = (props) => {
 
     return (
         <article className="parents">
-            <h2>Bridge the Gap's Parents and Students</h2>
+            <h2>Parent Profile</h2>
             {
                 parents.map(parent => {
                     return <section key={`parent--${parent.id}`} className="parent">

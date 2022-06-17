@@ -6,7 +6,7 @@ export const NavBar = () => {
   const history = useHistory()
   return (
     <ul className="navbar">
-      <Link to="/">Home</Link>
+      <Link className="navbar__link" to="/">Home</Link>
       <li className="navbar__item">
         <Link className="navbar__link" to="/tutors">Tutors</Link>
       </li>
