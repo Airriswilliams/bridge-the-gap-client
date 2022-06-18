@@ -52,7 +52,6 @@ export const SessionList = (props) => {
         );
       };
 
-
     return (
         <article className="sessions">
               <header>
@@ -67,9 +66,16 @@ export const SessionList = (props) => {
       </header>
             {
                 sessions.map(session => {
+                  
+                    //Session.parent.map(parent=>parent.child_name) =>["Airris", "Michael", "John"]
+                    //.join => Airris, Michael, John
+                    const childrenList = session?.parents?.map(parent => {
+                        return parent.child_name
+                    }).join(",");
+                    console.log("children list: ", childrenList);
                     return <section key={`tutor--${session.id}`} className="session">
                         <div className="session__tutor_name">Tutor: {session.tutor.name}</div>
-                        <div className="session__parent_child_name">Children Attending: {session?.parents?.map(parent => {return parent.child_name})} </div>
+                        <div className="session__parent_child_name">Children Attending: {childrenList} </div>
                         <div className="session__date">Date: {session.date}</div>
                         <div className="session__time">Time: {session.time}</div>
                         <div className="session__ skill_level">Skill Level: {session. skill_level}</div>

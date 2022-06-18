@@ -5,20 +5,12 @@ import "./NavBar.css"
 export const NavBar = () => {
   const history = useHistory()
   return (
-    <ul className="navbar">
+    <div className="navbar">
       <Link className="navbar__link" to="/">Home</Link>
-      <li className="navbar__item">
-        <Link className="navbar__link" to="/tutors">Tutors</Link>
-      </li>
-      <li className="navbar__item">
-        <Link className="navbar__link" to="/parents">Parents</Link>
-      </li>
-      <li className="navbar__item">
-        <Link className="navbar__link" to="/reviews">Reviews</Link>
-      </li>
-      <li className="navbar__item">
-        <Link className="navbar__link" to="/sessions">Sessions</Link>
-      </li>
+      <Link className="navbar__link" to="/tutors">Tutors</Link>
+      <Link className="navbar__link" to="/parents">Parents</Link>
+      <Link className="navbar__link" to="/reviews">Reviews</Link>
+      <Link className="navbar__link" to="/sessions">Sessions</Link>
       {
         localStorage.getItem("auth_token") !== null ?
           <button onClick={() => {
@@ -33,6 +25,6 @@ export const NavBar = () => {
             <Link className="navbar__link" to="/register">Register</Link>
           </>
       }
-    </ul>
+    </div>
   )
 }

@@ -20,9 +20,11 @@
   }
   
   .topSection {
-    background: url(/src/images/HomePage.jpg);
-    background-size: contain;
-    padding-top: 15vh;
+    /*background: url(/src/images/HomePage.jpg);
+    background-size: contain;*/
+    background: black;
+    width: 200px;
+    /*padding-top: 15vh;*/
   }
   
   .container {
@@ -42,6 +44,11 @@
     z-index: 1;
   }
   
+  .header {
+    display: flex;
+    height:100vh;
+  }
+
   .title {
     color: aqua;
     padding-left: 10em;

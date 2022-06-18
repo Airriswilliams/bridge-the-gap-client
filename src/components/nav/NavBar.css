@@ -1,18 +1,12 @@
 .navbar {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: right;
-    padding-bottom: 0.8em;
-  }
-  
-  .navbar__item {
-    flex-basis: 20%;
-    list-style-type: none;
+    flex-direction: column;
   }
   
   .navbar__link {
     color: white;
     text-decoration: none;
+    padding: 15px;
   }
   
   .navbar__link:hover {

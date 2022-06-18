@@ -23,3 +23,12 @@
   .tutor_image {
     grid-area: image;
 } */
+
+.tutor_list_section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tutor {
+  flex-basis: 33.333333%;
+}
