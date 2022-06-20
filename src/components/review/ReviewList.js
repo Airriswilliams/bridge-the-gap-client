@@ -35,7 +35,7 @@ export const ReviewList = (props) => {
                     </header>
 
                     <header>
-                    <Link className="navbar__link" to={`/reviews/${review.id}`}>Edit</Link>
+                    <Link className="edit__link" to={`/reviews/${review.id}`}>Edit</Link>
                     </header>
 
                     </section>

@@ -17,7 +17,7 @@ export const BridgeTheGap = () => {
                  <>
                   <div className="header">
                   <div className="topSection">
-                    
+                    <h1>BTG</h1>
                         <NavBar />
                         </div>
                         <ApplicationViews />

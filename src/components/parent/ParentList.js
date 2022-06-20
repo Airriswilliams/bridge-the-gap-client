@@ -14,16 +14,17 @@ export const ParentList = (props) => {
     return (
         <article className="parents">
             <h2>Parent Profile</h2>
-            {
-                parents.map(parent => {
-                    return <section key={`parent--${parent.id}`} className="parent">
-                        <div className="child__name">Parent of {parent.child_name}</div>
-                        <div className="child__age">My child is {parent.child_age} years old</div>
+            <section key={`parent--${parents?.id}`} className="parents">
+                        <div className="child__name">Child Name: {parents?.child_name}</div>
+                        <div className="child__age">Age: {parents?.child_age} years old</div>
+                        <div className="child__session">Upcoming Sessions: {parents?.sessions?.map(session => {
+                        return session.date
+                    }).join(",")}</div>
+
 
 
                     </section>
-                })
-            }
+           
 
 
 

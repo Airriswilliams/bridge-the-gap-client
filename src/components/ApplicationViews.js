@@ -7,6 +7,7 @@ import { SessionList } from "./tutorsession/SessionList.js"
 import { TutorReview } from "./tutor/ReviewForm.js"
 import { EditReview } from "./tutor/UpdateReview.js"
 import { SessionForm } from "./tutorsession/SessionForm.js"
+import { HomePage } from "./home/HomePage.js"
 
 export const ApplicationViews = () => {
     return (
@@ -18,7 +19,7 @@ export const ApplicationViews = () => {
             <Route exact path="/tutors">
                 <TutorList />
             </Route>
-
+            
             <Route exact path="/parents">
                 <ParentList />
             </Route>
@@ -41,6 +42,9 @@ export const ApplicationViews = () => {
         <Route exact path="/reviews/:reviewId(\d+)">
           <EditReview />
         </Route>
+        {/* <Route exact path="/">
+                <HomePage />
+            </Route> */}
         </main>
     </>
     );
