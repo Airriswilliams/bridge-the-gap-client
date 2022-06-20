@@ -9,8 +9,8 @@ export const NavBar = () => {
   return (
     <div className="navbar">
       <Link className="navbar__link" to="/"><FcHome/>Home</Link>
-      <Link className="navbar__link" to="/tutors">Tutors</Link>
       <Link className="navbar__link" to="/parents"><CgProfile/>Parents</Link>
+      <Link className="navbar__link" to="/tutors">Tutors</Link>
       <Link className="navbar__link" to="/reviews"><FcList/>Reviews</Link>
       <Link className="navbar__link" to="/sessions">Sessions</Link>
       {

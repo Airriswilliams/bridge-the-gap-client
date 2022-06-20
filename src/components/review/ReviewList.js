@@ -23,6 +23,8 @@ export const ReviewList = (props) => {
         <article className="reviews">
      
             <h2>Tutor Reviews</h2>
+            <div className="review_list_section">
+
             {
                 reviews.map(review => {
                     return <section key={`review--${review.id}`} className="review">
@@ -41,7 +43,7 @@ export const ReviewList = (props) => {
                     </section>
                        
                     })
-                }
+                }</div>
 
        
 

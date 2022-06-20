@@ -31,4 +31,10 @@
 
 .tutor {
   flex-basis: 33.333333%;
+  background: wheat;
+}
+
+.tutors h3 {
+    color: black;
+    background: white;
 }

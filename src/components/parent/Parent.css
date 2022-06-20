@@ -1,0 +1,7 @@
+.parents {
+    color: black;
+    background: white;
+    box-shadow: black;
+    flex: 1 1 21rem;
+    margin: 10px 20px;
+}

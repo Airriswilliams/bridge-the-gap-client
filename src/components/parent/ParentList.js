@@ -1,6 +1,8 @@
 import React, {useEffect} from "react"
 import { useState } from "react/cjs/react.development"
 import { getParents } from "./ParentManager.js"
+import "./Parent.css"
+
 
 
 export const ParentList = (props) => {
